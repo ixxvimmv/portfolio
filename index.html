@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Karyzza Bernardo – Portfolio</title>
+  <meta name="description" content="Personal portfolio of Karyzza Bernardo: projects, skills, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap" rel="stylesheet">
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Karyzza<span style="color:var(--primary)"> Bernardo</span></div>
+      <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeBtn" aria-label="Toggle theme">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero container" id="home">
+    <div>
+      <h1 class="title">Hi, I'm <span style="color:var(--primary)">Karyzza Bernardo</span>— a student developer who turns ideas into fast, delightful web apps.</h1>
+      <p class="subtitle">I specialize in building clean, accessible interfaces with HTML, CSS, and JavaScript. Currently exploring backend and devops to become a well-rounded engineer.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See Projects</a>
+        <a class="btn ghost" href="#contact">Contact Me</a>
+        <a class="btn ghost" href="resume.pdf" download>Download Résumé</a>
+      </div>
+    </div>
+    <div class="headshot">Your Photo</div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="about">
+      <h2 class="section-title">About</h2>
+      <div class="card">
+        <p>I'm a Computer Engineering Technology student who enjoys solving problems and shipping polished experiences. I love working with HTML/CSS/JS and I'm comfortable with C/C++, Java, and Python. In my free time, I experiment with microcontrollers and tinker with small automation projects.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <span class="chip">HTML5</span>
+        <span class="chip">CSS3</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">Responsive Design</span>
+        <span class="chip">C / C++</span>
+        <span class="chip">Java</span>
+        <span class="chip">Python</span>
+        <span class="chip">Git & GitHub</span>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <article class="card project">
+          <img src="images/pomodoro timer.png" alt="pomodoro timer screenshot" style="width:100%; border-radius:8px; margin-bottom:8px;">
+          <h3>Pomodoro Timer</h3>
+          <p>It allows users to manage work and break sessions, providing a visual timer, alarms, and motivational quotes after each session. The timer is customizable and works offline without external dependencies.</p>
+          <div>
+            <a href="https://ixxvimmv.github.io/pomodoro-timer/" target="_blank" rel="noopener">Live Demo</a> ·
+            <a href="https://github.com/ixxvimmv/pomodoro-timer/blob/main/index.html" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+        <article class="card project">
+          <img src="images/daily and weekly task tracker.png" alt="daily and weekly task tracker screenshot" style="width:100%; border-radius:8px; margin-bottom:8px;">
+          <h3>Daily and Weekly Task Tracker</h3>
+          <p>A lightweight, mobile-friendly task management web app with a built-in calendar and live clock. Tasks are stored locally in the browser, ensuring they persist across sessions without requiring a database.</p>
+          <div>
+            <a href="https://ixxvimmv.github.io/daily-and-weekly-task/" target="_blank" rel="noopener">Live Demo</a> ·
+            <a href="https://github.com/ixxvimmv/daily-and-weekly-task/blob/main/index.html" target="_blank" rel="noopener">Source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Experience & Education</h2>
+      <div class="card">
+        <div class="timeline">
+          <div class="timeline-item">
+            <h4>Bachelor in Engineering Technology major in Computer Engineering Technology</h4>
+            <div class="meta">Technological University of the Philippines — 2023–Present</div>
+            <p>Coursework: Microprocessors, Digital Systems, Web Dev, Data Structures.</p>
+          </div>
+          <div class="timeline-item">
+            <h4>Freelance Web Projects</h4>
+            <div class="meta">2024–Present</div>
+            <p>Built static sites and small JS apps for school and personal clients.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Contact</h2>
+      <div class="card">
+        <form action="https://formspree.io/f/your-id" method="POST">
+          <div style="display:grid; gap:.8rem; grid-template-columns: 1fr 1fr;">
+            <label>
+              <span class="small">Name</span>
+              <input required type="text" name="name" placeholder="Your name" />
+            </label>
+            <label>
+              <span class="small">Email</span>
+              <input required type="email" name="email" placeholder="you@example.com" />
+            </label>
+          </div>
+          <label>
+            <span class="small">Message</span>
+            <textarea required name="message" placeholder="Tell me about your project..."></textarea>
+          </label>
+          <button class="btn primary" type="submit">Send Message</button>
+          <p class="small">Prefer email? <a href="mailto:you@example.com" style="color:var(--primary)">you@example.com</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Karyzza Bernardo · Built with HTML & CSS</div>
+  </footer>
+
+  <!-- External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
