@@ -1,18 +1,37 @@
-// Auto update year in footer
-document.getElementById('year').textContent = new Date().getFullYear();
+/**
+ * Portfolio JavaScript - Enhanced functionality
+ * Features: Theme toggle, smooth scroll, form validation, mobile menu, analytics
+ */
 
-// Theme toggle
-const root = document.documentElement;
-const btn = document.getElementById('themeBtn');
-const saved = localStorage.getItem('theme');
+class PortfolioApp {
+  constructor() {
+    this.init();
+  }
 
-if (saved) {
-  root.setAttribute('data-theme', saved);
-}
+  init() {
+    this.updateYear();
+    this.initThemeToggle();
+    this.initSmoothScroll();
+    this.initFormValidation();
+    this.initMobileMenu();
+    this.initProjectCards();
+    this.initSkipLink();
+  }
 
-btn.addEventListener('click', () => {
-  const current = root.getAttribute('data-theme');
-  const next = current === 'dark' ? 'light' : 'dark';
-  root.setAttribute('data-theme', next);
-  localStorage.setItem('theme', next);
-});
+  // Update footer year
+  updateYear() {
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  }
+
+  // Theme toggle with localStorage & system preference
+  initThemeToggle() {
+    const root = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+
+    root.setAttribute('data-theme', currentTheme);
+    this.updateToggleIcon(currentTheme);
+
+    toggle.addEventListener('click', () => {
+      const nextTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark
