@@ -5,26 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#3b82f6">
   
-  <!-- SEO & Open Graph -->
   <title>Karyzza Bernardo - Front-end Developer & Computer Engineering Student</title>
   <meta name="description" content="I build fast, accessible web apps with HTML, CSS, JavaScript. Computer Engineering Technology student passionate about clean code and delightful UX.">
   <meta name="keywords" content="front-end developer, web developer, portfolio, computer engineering, HTML, CSS, JavaScript">
   
-  <!-- Open Graph -->
   <meta property="og:title" content="Karyzza Bernardo - Portfolio">
   <meta property="og:description" content="Front-end developer & Computer Engineering student building fast web experiences">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yourusername.github.io">
   <meta property="og:image" content="https://yourusername.github.io/images/og-image.jpg">
   
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Karyzza Bernardo - Portfolio">
   <meta name="twitter:description" content="Front-end developer & Computer Engineering student">
   
   <link rel="canonical" href="https://yourusername.github.io">
   
-  <!-- Fonts & Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -32,18 +28,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   </noscript>
   
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-theme="light">
-  <!-- Skip link for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Navigation -->
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container navbar__inner">
       <a href="/" class="brand" aria-label="Karyzza Bernardo - Home">
@@ -58,17 +51,12 @@
         <li><a href="#contact" class="navbar__link" role="menuitem">Contact</a></li>
       </ul>
       
-      <button 
-        class="theme-toggle" 
-        id="themeToggle"
-        aria-label="Toggle dark mode"
-        data-theme-toggle>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" data-theme-toggle>
         <span class="theme-toggle__icon" aria-hidden="true">🌙</span>
       </button>
     </div>
   </nav>
 
-  <!-- Hero -->
   <header class="hero" id="home" role="banner">
     <div class="container hero__content">
       <div class="hero__text">
@@ -84,16 +72,12 @@
         <div class="hero__cta">
           <a href="#projects" class="btn btn--primary btn--large" aria-label="View my projects">
             <span class="btn__text">View Projects</span>
-            <span class="btn__icon" aria-hidden="true">🚀</span>
+            <span class="btn__icon" aria-hidden="true"></span>
           </a>
           <a href="#contact" class="btn btn--secondary btn--large" aria-label="Get in touch">
             Get In Touch
           </a>
-          <a 
-            href="resume.pdf" 
-            class="btn btn--outline btn--large" 
-            download
-            aria-label="Download resume PDF">
+          <a href="resume.pdf" class="btn btn--outline btn--large" download aria-label="Download resume PDF">
             <span class="btn__text">Download CV</span>
             <span class="btn__icon" aria-hidden="true">📄</span>
           </a>
@@ -102,14 +86,7 @@
       
       <figure class="hero__image" aria-hidden="true">
         <div class="headshot" role="img" aria-label="Profile photo of Karyzza Bernardo">
-          <!-- Replace with your actual photo (optimized WebP/JPG, 400x400) -->
-          <img 
-            src="images/profile.jpg" 
-            alt="" 
-            loading="lazy" 
-            width="400" 
-            height="400"
-            decoding="async">
+          <img src="images/Pochacco.jpg" alt="" loading="lazy" width="400" height="400" decoding="async">
         </div>
       </figure>
     </div>
@@ -118,7 +95,6 @@
   <main id="main-content" class="main">
     <div class="container">
       
-      <!-- About -->
       <section id="about" class="section about" role="region" aria-labelledby="about-title">
         <h2 id="about-title" class="section__title">About Me</h2>
         <div class="card">
@@ -134,7 +110,6 @@
         </div>
       </section>
 
-      <!-- Skills -->
       <section id="skills" class="section skills" role="region" aria-labelledby="skills-title">
         <h2 id="skills-title" class="section__title">Skills & Tools</h2>
         <div class="skills__grid">
@@ -151,20 +126,15 @@
         </div>
       </section>
 
-      <!-- Projects -->
       <section id="projects" class="section projects" role="region" aria-labelledby="projects-title">
         <h2 id="projects-title" class="section__title">Featured Projects</h2>
         <div class="projects__grid">
           
           <article class="project-card card" tabindex="0">
             <div class="project-card__image">
-              <img 
-                src="images/pomodoro-timer.png" 
-                alt="Pomodoro Timer app screenshot showing timer interface with customizable work/break sessions"
-                loading="lazy" 
-                width="600" 
-                height="400"
-                decoding="async">
+              <img src="images/pomodoro timer.png" 
+                   alt="Pomodoro Timer app screenshot showing timer interface with customizable work/break sessions"
+                   loading="lazy" width="600" height="400" decoding="async">
             </div>
             <div class="project-card__content">
               <h3 class="project-card__title">Pomodoro Timer</h3>
@@ -173,18 +143,12 @@
                 motivational quotes, and offline support. Built with vanilla JavaScript.
               </p>
               <div class="project-card__links">
-                <a href="https://ixxvimmv.github.io/pomodoro-timer/" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="btn btn--primary btn--small"
-                   aria-label="View Pomodoro Timer live demo">
+                <a href="https://ixxvimmv.github.io/pomodoro-timer/" target="_blank" rel="noopener noreferrer"
+                   class="btn btn--primary btn--small" aria-label="View Pomodoro Timer live demo">
                   Live Demo
                 </a>
-                <a href="https://github.com/ixxvimmv/pomodoro-timer" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="btn btn--outline btn--small"
-                   aria-label="View Pomodoro Timer source code">
+                <a href="https://github.com/ixxvimmv/pomodoro-timer" target="_blank" rel="noopener noreferrer"
+                   class="btn btn--outline btn--small" aria-label="View Pomodoro Timer source code">
                   Source
                 </a>
               </div>
@@ -193,13 +157,9 @@
 
           <article class="project-card card" tabindex="0">
             <div class="project-card__image">
-              <img 
-                src="images/task-tracker.png" 
-                alt="Daily and Weekly Task Tracker app screenshot showing calendar view and task list"
-                loading="lazy" 
-                width="600" 
-                height="400"
-                decoding="async">
+              <img src="images/task tracker.png" 
+                   alt="Daily and Weekly Task Tracker app screenshot showing calendar view and task list"
+                   loading="lazy" width="600" height="400" decoding="async">
             </div>
             <div class="project-card__content">
               <h3 class="project-card__title">Daily & Weekly Task Tracker</h3>
@@ -208,55 +168,46 @@
                 No backend required - works completely offline.
               </p>
               <div class="project-card__links">
-                <a href="https://ixxvimmv.github.io/daily-and-weekly-task/" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="btn btn--primary btn--small"
-                   aria-label="View Task Tracker live demo">
+                <a href="https://ixxvimmv.github.io/daily-and-weekly-task/" target="_blank" rel="noopener noreferrer"
+                   class="btn btn--primary btn--small" aria-label="View Task Tracker live demo">
                   Live Demo
                 </a>
-                <a href="https://github.com/ixxvimmv/daily-and-weekly-task" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="btn btn--outline btn--small"
-                   aria-label="View Task Tracker source code">
+                <a href="https://github.com/ixxvimmv/daily-and-weekly-task" target="_blank" rel="noopener noreferrer"
+                   class="btn btn--outline btn--small" aria-label="View Task Tracker source code">
                   Source
                 </a>
               </div>
             </div>
           </article>
-
         </div>
       </section>
 
-      <!-- Experience -->
-<section id="experience" class="section experience" role="region" aria-labelledby="experience-title">
-  <h2 id="experience-title" class="section__title">Experience & Education</h2>
-  <div class="card">
-    <div class="timeline">
-      <div class="timeline__item">
-        <div class="timeline__header">
-          <h3 class="timeline__title">Bachelor in Engineering Technology, major in Computer Engineering Technology</h3>
-          <div class="timeline__meta">Technological University of the Philippines — 2023–Present</div>
+      <section id="experience" class="section experience" role="region" aria-labelledby="experience-title">
+        <h2 id="experience-title" class="section__title">Experience & Education</h2>
+        <div class="card">
+          <div class="timeline">
+            <div class="timeline__item">
+              <div class="timeline__header">
+                <h3 class="timeline__title">Bachelor in Engineering Technology, major in Computer Engineering Technology</h3>
+                <div class="timeline__meta">Technological University of the Philippines — 2023–Present</div>
+              </div>
+              <p class="timeline__description">
+                Coursework: Microprocessors, Digital Systems, Web Development, Data Structures & Algorithms
+              </p>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__header">
+                <h3 class="timeline__title">Freelance Web Developer</h3>
+                <div class="timeline__meta">2024–Present</div>
+              </div>
+              <p class="timeline__description">
+                Building static websites and interactive JavaScript applications for school projects and personal clients.
+              </p>
+            </div>
+          </div>
         </div>
-        <p class="timeline__description">
-          Coursework: Microprocessors, Digital Systems, Web Development, Data Structures & Algorithms
-        </p>
-      </div>
-      <div class="timeline__item">
-        <div class="timeline__header">
-          <h3 class="timeline__title">Freelance Web Developer</h3>
-          <div class="timeline__meta">2024–Present</div>
-        </div>
-        <p class="timeline__description">
-          Building static websites and interactive JavaScript applications for school projects and personal clients.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
-      <!-- Contact -->
       <section id="contact" class="section contact" role="region" aria-labelledby="contact-title">
         <h2 id="contact-title" class="section__title">Get In Touch</h2>
         <div class="card">
@@ -264,60 +215,25 @@
             Got a project in mind? I'd love to hear about it. Send me a message or email me directly.
           </p>
           
-          <form 
-            class="contact__form" 
-            action="https://formspree.io/f/mayplwkz" 
-            method="POST"
-            novalidate
-            aria-describedby="form-success"
-            data-form>
-            
+          <form class="contact__form" action="https://formspree.io/f/mayplwkz" method="POST" novalidate aria-describedby="form-success" data-form>
             <div class="form__row">
               <div class="form__group">
                 <label for="contact-name" class="form__label">Full Name</label>
-                <input 
-                  type="text" 
-                  id="contact-name"
-                  name="name" 
-                  required 
-                  placeholder="Your name"
-                  class="form__input"
-                  maxlength="50">
+                <input type="text" id="contact-name" name="name" required placeholder="Your name" class="form__input" maxlength="50">
                 <span class="form__error" aria-live="polite"></span>
               </div>
-              
               <div class="form__group">
                 <label for="contact-email" class="form__label">Email Address</label>
-                <input 
-                  type="email" 
-                  id="contact-email"
-                  name="email" 
-                  required 
-                  placeholder="you@example.com"
-                  class="form__input"
-                  maxlength="100">
+                <input type="email" id="contact-email" name="email" required placeholder="you@example.com" class="form__input" maxlength="100">
                 <span class="form__error" aria-live="polite"></span>
               </div>
             </div>
-            
             <div class="form__group">
               <label for="contact-message" class="form__label">Message</label>
-              <textarea 
-                id="contact-message"
-                name="message" 
-                required 
-                placeholder="Tell me about your project or collaboration idea..."
-                rows="5"
-                class="form__textarea"
-                maxlength="500"></textarea>
+              <textarea id="contact-message" name="message" required placeholder="Tell me about your project or collaboration idea..." rows="5" class="form__textarea" maxlength="500"></textarea>
               <span class="form__error" aria-live="polite"></span>
             </div>
-            
-            <button 
-              type="submit" 
-              class="btn btn--primary btn--large form__submit"
-              disabled
-              data-loading>
+            <button type="submit" class="btn btn--primary btn--large form__submit" disabled data-loading>
               <span class="btn__text">Send Message</span>
               <span class="btn__loading" aria-hidden="true"></span>
             </button>
@@ -325,18 +241,16 @@
           
           <div class="contact__direct">
             <p>Or email me directly: 
-              <a href="mailto:your-email@example.com" class="link--highlight" aria-label="Email Karyzza Bernardo">
-                your-email@example.com
+              <a href="mailto:karyzzacathlynn@gmail.com" class="link--highlight" aria-label="Email Karyzza Bernardo">
+                karyzzacathlynn@gmail.com
               </a>
             </p>
           </div>
         </div>
       </section>
-      
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="footer" role="contentinfo">
     <div class="container">
       <p class="footer__text">
