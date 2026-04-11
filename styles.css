@@ -3,14 +3,14 @@
    ========================================================================== */
 :root {
   /* 8px Spacing System */
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 40px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-  --space-4xl: 80px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 28px;
+  --space-4xl: 32px;
 
   /* Dark Gradient Theme */
   --bg-primary: #0a0a1e;
@@ -54,7 +54,7 @@ body {
    LAYOUT
    ========================================================================== */
 .container { 
-  width: min(1200px, 95vw); 
+  width: min(1000px, 95vw); 
   margin: 0 auto; 
   padding: 0 var(--space-md);
 }
