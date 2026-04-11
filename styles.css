@@ -2,17 +2,22 @@
    CSS CUSTOM PROPERTIES (Theme System + SPACING SYSTEM)
    ========================================================================== */
 :root {
-  /* Spacing System (8pt scale) */
-  --space-xs: 8px;
-  --space-sm: 16px;
-  --space-md: 24px;
-  --space-lg: 32px;
-  --space-xl: 40px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-  --space-4xl: 80px;
-  --space-5xl: 96px;
-  --space-6xl: 120px;
+  /* ✅ COMPACT 4pt Scale (was 8pt) */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 12px;
+  --space-lg: 16px;
+  --space-xl: 20px;
+  --space-2xl: 24px;
+  --space-3xl: 32px;
+  --space-4xl: 40px;
+  --space-5xl: 48px;
+  --space-6xl: 56px;  /* Reduced from 120px */
+  
+  /* Keep all your theme colors the same */
+  --bg: #0b0c10;
+  /* ... rest unchanged ... */
+}
 
   /* Dark mode (default) */
   --bg: #0b0c10;
