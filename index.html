@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#0a0a1e">
+  <meta name="theme-color" content="#090b10">
 
   <title>Karyzza Bernardo - Front-end Developer</title>
   <meta name="description" content="Front-end developer & Computer Engineering student. Building fast, accessible web experiences with modern technologies.">
@@ -20,8 +20,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"></noscript>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"></noscript>
 
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -43,9 +43,10 @@
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container navbar__inner">
-      <a href="/" class="brand">Karyzza <span class="brand__highlight">Bernardo</span></a>
+      <a href="#home" class="brand">Karyzza<span class="brand__highlight">.</span></a>
 
       <ul class="navbar__menu" id="navbar-menu">
+        <li><a href="#home" class="navbar__link">Home</a></li>
         <li><a href="#about" class="navbar__link">About</a></li>
         <li><a href="#skills" class="navbar__link">Skills</a></li>
         <li><a href="#projects" class="navbar__link">Projects</a></li>
@@ -64,7 +65,7 @@
     </div>
   </nav>
 
-  <!-- Hero Section - New Profile Layout -->
+  <!-- Hero -->
   <header class="hero" id="home">
     <div class="container">
       <div class="hero__profile">
@@ -72,19 +73,17 @@
           <img src="images/Pochacco.jpg" alt="Karyzza Bernardo - Front-end Developer" loading="lazy" width="200" height="200">
         </div>
         <div class="profile__text">
-          <h1 class="hero__title">
-            Hi, I'm <span class="hero__name">Karyzza Bernardo</span>
-          </h1>
-          <p class="hero__subtitle">Bridging Hardware & Software as a Computer Engineering Technology Student</p>
+          <p class="hero__eyebrow" id="hero-role" aria-live="polite">Front-end Developer<span class="cursor" aria-hidden="true"></span></p>
+          <h1 class="hero__title">Hi, I'm <span class="hero__name">Karyzza Bernardo</span></h1>
           <p class="hero__description">
-            I craft fast, accessible web experiences with HTML, CSS, JavaScript.
-            Passionate about clean code and delightful UX.
+            I craft fast, accessible web experiences with HTML, CSS, and JavaScript —
+            with a Computer Engineering foundation in how the hardware underneath actually works.
           </p>
           <div class="hero__cta">
             <a href="#projects" class="btn btn--primary">View Projects</a>
             <a href="#contact" class="btn btn--secondary">Get In Touch</a>
-            <a href="Karyzza-Bernardo-Resume.pdf" class="btn btn--outline btn--cv" download aria-label="Download Karyzza Bernardo's Resume (PDF)">
-              <span>📄 Download CV</span>
+            <a href="Karyzza-Bernardo-Resume.pdf" class="btn btn--outline" download aria-label="Download Karyzza Bernardo's Resume (PDF)">
+              <span>Download CV</span>
             </a>
           </div>
         </div>
@@ -95,16 +94,17 @@
   <main id="main-content">
     <div class="container">
 
-<!-- About -->
+      <!-- About -->
       <section id="about" class="section">
+        <span class="eyebrow">01 · About</span>
         <h2 class="section__title">About Me</h2>
-        <div class="card about__content">
+        <div class="card reveal">
           <p>
             Computer Engineering Technology student passionate about bridging the gap
             between hardware and software. I specialize in building IoT-based embedded systems,
             developing data-driven applications, and designing clean, accessible user experiences.
           </p>
-          <p>
+          <p style="margin-top: 1rem;">
             Comfortable developing intelligent automation systems using <strong>C/C++</strong> and <strong>Java</strong>,
             designing structured network infrastructures, and building full-stack applications with
             web and mobile frontends.
@@ -112,11 +112,12 @@
         </div>
       </section>
 
-      <!-- Skills - Redesigned as Cards -->
+      <!-- Skills -->
       <section id="skills" class="section">
+        <span class="eyebrow">02 · Skills</span>
         <h2 class="section__title">Skills & Tools</h2>
         <div class="skills__grid">
-          <div class="skill-card">
+          <div class="skill-card card reveal">
             <span class="skill-card__title">Embedded & IoT</span>
             <div class="skill-card__list">
               <span>C / C++</span>
@@ -126,7 +127,7 @@
               <span>TinyML</span>
             </div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card card reveal">
             <span class="skill-card__title">Software & Networking</span>
             <div class="skill-card__list">
               <span>Java</span>
@@ -136,7 +137,7 @@
               <span>Cisco Packet Tracer</span>
             </div>
           </div>
-          <div class="skill-card">
+          <div class="skill-card card reveal">
             <span class="skill-card__title">Web & Tools</span>
             <div class="skill-card__list">
               <span>HTML5 / CSS3 / JS</span>
@@ -148,11 +149,12 @@
         </div>
       </section>
 
-      <!-- Projects (Unchanged structure, styled differently) -->
+      <!-- Projects -->
       <section id="projects" class="section">
+        <span class="eyebrow">03 · Projects</span>
         <h2 class="section__title">Featured Projects</h2>
         <div class="projects__grid">
-          <article class="project-card card">
+          <article class="project-card card reveal">
             <div class="project-card__image">
               <img src="images/pomodoro timer.png" alt="Pomodoro Timer app screenshot" loading="lazy" width="400" height="250">
             </div>
@@ -171,7 +173,7 @@
             </div>
           </article>
 
-          <article class="project-card card">
+          <article class="project-card card reveal">
             <div class="project-card__image">
               <img src="images/daily and weekly task tracker.png" alt="Daily & Weekly Task Tracker app screenshot" loading="lazy" width="400" height="250">
             </div>
@@ -191,7 +193,7 @@
             </div>
           </article>
 
-          <article class="project-card card">
+          <article class="project-card card reveal">
             <div class="project-card__image">
               <img src="images/resume generator.png" alt="Resume Generator app screenshot" loading="lazy" width="400" height="250">
             </div>
@@ -199,7 +201,7 @@
               <h3>Resume Generator</h3>
               <p>Simple yet powerful web app that lets users fill a form and automatically generates
                   a professional, formatted resume. Supports profile picture upload, structured sections,
-                  and clean minimalist design. Perfect for quick resume creation.</p>
+                  and clean minimalist design.</p>
               <div class="project-card__tags">
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
@@ -216,24 +218,15 @@
 
       <!-- Experience -->
       <section id="experience" class="section">
+        <span class="eyebrow">04 · Experience</span>
         <h2 class="section__title">Experience & Education</h2>
-        <div class="timeline-container card">
+        <div class="timeline-container card reveal">
           <div class="timeline">
             <div class="timeline__item">
               <div class="timeline__header">
-                <h3>Bachelor in Engineering Technology, Computer Engineering</h3>
+                <h3>Bachelor in Engineering Technology, major in Computer Engineering Technology</h3>
                 <div class="timeline__meta">Technological University of the Philippines — 2023–Present</div>
               </div>
-            </div>
-            <div class="timeline__item">
-              <div class="timeline__header">
-                <h3>Freelance Web Developer</h3>
-                <div class="timeline__meta">2024–Present</div>
-              </div>
-              <p class="timeline__desc">
-                Designing and building responsive websites and small web apps for clients,
-                handling everything from layout and styling to interactivity and deployment.
-              </p>
             </div>
             <div class="timeline__item">
               <div class="timeline__header">
@@ -247,8 +240,9 @@
 
       <!-- Contact -->
       <section id="contact" class="section">
+        <span class="eyebrow">05 · Contact</span>
         <h2 class="section__title">Get In Touch</h2>
-        <div class="card">
+        <div class="card reveal">
           <p class="contact__intro">Got a project in mind? I'd love to hear about it.</p>
 
           <form class="contact__form" action="https://formspree.io/f/mayplwkz" method="POST">
@@ -329,6 +323,75 @@
           navToggle.setAttribute('aria-expanded', 'false');
         });
       });
+    })();
+
+    // Hero role typewriter — the page's signature interactive moment
+    (function () {
+      var el = document.getElementById('hero-role');
+      if (!el) return;
+      var textNode = el.firstChild;
+      var roles = ['Front-end Developer', 'Computer Engineer Technology', 'Problem Solver'];
+      var roleIndex = 0, charIndex = 0, deleting = false;
+      var typeSpeed = 65, deleteSpeed = 35, holdTime = 1400, gapTime = 400;
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return; // leave static first role in place
+      }
+
+      function tick() {
+        var current = roles[roleIndex];
+        if (!deleting) {
+          charIndex++;
+          textNode.textContent = current.slice(0, charIndex);
+          if (charIndex === current.length) {
+            deleting = true;
+            return setTimeout(tick, holdTime);
+          }
+          return setTimeout(tick, typeSpeed);
+        } else {
+          charIndex--;
+          textNode.textContent = current.slice(0, charIndex);
+          if (charIndex === 0) {
+            deleting = false;
+            roleIndex = (roleIndex + 1) % roles.length;
+            return setTimeout(tick, gapTime);
+          }
+          return setTimeout(tick, deleteSpeed);
+        }
+      }
+      setTimeout(tick, 1200);
+    })();
+
+    // Cursor-tracking glass sheen on cards
+    (function () {
+      var cards = document.querySelectorAll('.card');
+      cards.forEach(function (card) {
+        card.addEventListener('mousemove', function (e) {
+          var rect = card.getBoundingClientRect();
+          var x = ((e.clientX - rect.left) / rect.width) * 100;
+          var y = ((e.clientY - rect.top) / rect.height) * 100;
+          card.style.setProperty('--mx', x + '%');
+          card.style.setProperty('--my', y + '%');
+        });
+      });
+    })();
+
+    // Reveal-on-scroll
+    (function () {
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || !items.length) {
+        items.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+      items.forEach(function (el) { observer.observe(el); });
     })();
   </script>
   <script src="js/main.js" defer></script>
