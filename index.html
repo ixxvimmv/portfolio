@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="en" class="no-js" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,6 +29,13 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 
   <link rel="stylesheet" href="styles.css">
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var theme = saved || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
   <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -38,13 +45,22 @@
     <div class="container navbar__inner">
       <a href="/" class="brand">Karyzza <span class="brand__highlight">Bernardo</span></a>
 
-      <ul class="navbar__menu">
+      <ul class="navbar__menu" id="navbar-menu">
         <li><a href="#about" class="navbar__link">About</a></li>
         <li><a href="#skills" class="navbar__link">Skills</a></li>
         <li><a href="#projects" class="navbar__link">Projects</a></li>
         <li><a href="#experience" class="navbar__link">Experience</a></li>
         <li><a href="#contact" class="navbar__link">Contact</a></li>
       </ul>
+
+      <div class="navbar__group">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" aria-pressed="false">
+          <span class="theme-toggle__thumb" aria-hidden="true">🌙</span>
+        </button>
+        <button type="button" class="navbar__toggle" id="navbar-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navbar-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -138,7 +154,7 @@
         <div class="projects__grid">
           <article class="project-card card">
             <div class="project-card__image">
-              <img src="images/pomodoro-timer.png" alt="Pomodoro Timer app screenshot" loading="lazy" width="400" height="250">
+              <img src="images/pomodoro timer.png" alt="Pomodoro Timer app screenshot" loading="lazy" width="400" height="250">
             </div>
             <div class="project-card__content">
               <h3>Pomodoro Timer</h3>
@@ -157,7 +173,7 @@
 
           <article class="project-card card">
             <div class="project-card__image">
-              <img src="images/daily-and-weekly-task-tracker.png" alt="Daily & Weekly Task Tracker app screenshot" loading="lazy" width="400" height="250">
+              <img src="images/daily and weekly task tracker.png" alt="Daily & Weekly Task Tracker app screenshot" loading="lazy" width="400" height="250">
             </div>
             <div class="project-card__content">
               <h3>Daily & Weekly Task Tracker</h3>
@@ -177,7 +193,7 @@
 
           <article class="project-card card">
             <div class="project-card__image">
-              <img src="images/resume-generator.png" alt="Resume Generator app screenshot" loading="lazy" width="400" height="250">
+              <img src="images/resume generator.png" alt="Resume Generator app screenshot" loading="lazy" width="400" height="250">
             </div>
             <div class="project-card__content">
               <h3>Resume Generator</h3>
@@ -272,6 +288,49 @@
     </div>
   </footer>
 
+  <script>
+    // Theme toggle
+    (function () {
+      var toggle = document.getElementById('theme-toggle');
+      var html = document.documentElement;
+
+      function applyLabel(theme) {
+        var thumb = toggle.querySelector('.theme-toggle__thumb');
+        var isLight = theme === 'light';
+        toggle.setAttribute('aria-pressed', String(isLight));
+        toggle.setAttribute('aria-label', isLight ? 'Switch to dark mode' : 'Switch to light mode');
+        thumb.textContent = isLight ? '☀️' : '🌙';
+      }
+
+      applyLabel(html.getAttribute('data-theme') || 'dark');
+
+      toggle.addEventListener('click', function () {
+        var current = html.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+        html.setAttribute('data-theme', current);
+        localStorage.setItem('theme', current);
+        applyLabel(current);
+      });
+    })();
+
+    // Mobile nav toggle
+    (function () {
+      var navToggle = document.getElementById('navbar-toggle');
+      var navMenu = document.getElementById('navbar-menu');
+      if (!navToggle || !navMenu) return;
+
+      navToggle.addEventListener('click', function () {
+        var isOpen = navMenu.classList.toggle('navbar__menu--open');
+        navToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      navMenu.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navMenu.classList.remove('navbar__menu--open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
+  </script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
