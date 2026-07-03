@@ -96,6 +96,7 @@
 
       <!-- About -->
       <section id="about" class="section">
+        <span class="eyebrow">01 · About</span>
         <h2 class="section__title">About Me</h2>
         <div class="card reveal">
           <p>
@@ -113,6 +114,7 @@
 
       <!-- Skills -->
       <section id="skills" class="section">
+        <span class="eyebrow">02 · Skills</span>
         <h2 class="section__title">Skills & Tools</h2>
         <div class="skills__grid">
           <div class="skill-card card reveal">
@@ -149,6 +151,7 @@
 
       <!-- Projects -->
       <section id="projects" class="section">
+        <span class="eyebrow">03 · Projects</span>
         <h2 class="section__title">Featured Projects</h2>
         <div class="projects__grid">
           <article class="project-card card reveal">
@@ -215,14 +218,25 @@
 
       <!-- Experience -->
       <section id="experience" class="section">
+        <span class="eyebrow">04 · Experience</span>
         <h2 class="section__title">Experience & Education</h2>
         <div class="timeline-container card reveal">
           <div class="timeline">
             <div class="timeline__item">
               <div class="timeline__header">
-                <h3>Bachelor in Engineering Technology, major in Computer Engineering Technology</h3>
+                <h3>Bachelor in Engineering Technology, Computer Engineering</h3>
                 <div class="timeline__meta">Technological University of the Philippines — 2023–Present</div>
               </div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__header">
+                <h3>Freelance Web Developer</h3>
+                <div class="timeline__meta">2024–Present</div>
+              </div>
+              <p class="timeline__desc">
+                Designing and building responsive websites and small web apps for clients,
+                handling everything from layout and styling to interactivity and deployment.
+              </p>
             </div>
             <div class="timeline__item">
               <div class="timeline__header">
@@ -232,10 +246,88 @@
             </div>
           </div>
         </div>
+
+        <div class="credentials__grid">
+          <div class="credentials__col card reveal">
+            <h3 class="credentials__title">Seminars & Trainings</h3>
+            <ul class="credentials__list">
+              <li>
+                <div class="credentials__row">
+                  <span class="credentials__name">Know Your Status: HIV Awareness Seminar & Free Screening</span>
+                  <span class="credentials__date">Oct 30, 2025</span>
+                </div>
+              </li>
+              <li>
+                <div class="credentials__row">
+                  <span class="credentials__name">Beyond the Desk: The Blueprint Towards Leadership Excellence</span>
+                  <span class="credentials__date">Nov 22, 2024</span>
+                </div>
+              </li>
+              <li>
+                <div class="credentials__row">
+                  <span class="credentials__name">KABAHAGI KA BAHAGHARI</span>
+                  <span class="credentials__date">April 17, 2024</span>
+                </div>
+                <p class="credentials__desc">sALAMIN: Kilalanin, Tanggapin, at Respetuhin ang Sarili at Kabahagi Natin</p>
+              </li>
+              <li>
+                <div class="credentials__row">
+                  <span class="credentials__name">Beyond Pixels: Navigating the Realm of Digital Software</span>
+                  <span class="credentials__date">April 1, 2024</span>
+                </div>
+                <ul class="credentials__sublist">
+                  <li>Adobe Softwares and Sketch Up</li>
+                  <li>Visual and Android Studio</li>
+                </ul>
+              </li>
+              <li>
+                <div class="credentials__row">
+                  <span class="credentials__name">JDVP Training</span>
+                  <span class="credentials__date">April 2023</span>
+                </div>
+                <p class="credentials__desc">College of St. Amatiel</p>
+              </li>
+              <li>
+                <div class="credentials__row">
+                  <span class="credentials__name">Work Immersion</span>
+                  <span class="credentials__date">March 2023</span>
+                </div>
+                <p class="credentials__desc">School Division Office – Valenzuela City</p>
+              </li>
+            </ul>
+          </div>
+
+          <div class="credentials__col card reveal">
+            <h3 class="credentials__title">Organizations</h3>
+            <ul class="credentials__list">
+              <li>
+                <div class="credentials__row">
+                  <span class="credentials__name">Students' Rights and Welfare Committee — University Student Government</span>
+                  <span class="credentials__date">April 17, 2024</span>
+                </div>
+                <p class="credentials__desc">Technological University of the Philippines–Manila</p>
+                <ul class="credentials__sublist">
+                  <li>Idulog Associate</li>
+                </ul>
+              </li>
+              <li>
+                <div class="credentials__row">
+                  <span class="credentials__name">Institute of Computer Engineering Technologist – Student Association</span>
+                  <span class="credentials__date">April 17, 2024</span>
+                </div>
+                <p class="credentials__desc">Technological University of the Philippines–Manila</p>
+                <ul class="credentials__sublist">
+                  <li>Member</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       <!-- Contact -->
       <section id="contact" class="section">
+        <span class="eyebrow">05 · Contact</span>
         <h2 class="section__title">Get In Touch</h2>
         <div class="card reveal">
           <p class="contact__intro">Got a project in mind? I'd love to hear about it.</p>
@@ -325,7 +417,7 @@
       var el = document.getElementById('hero-role');
       if (!el) return;
       var textNode = el.firstChild;
-      var roles = ['Front-end Developer', 'Computer Engineer Technology', 'Problem Solver'];
+      var roles = ['Front-end Developer', 'Computer Engineering Technology', 'Problem Solver'];
       var roleIndex = 0, charIndex = 0, deleting = false;
       var typeSpeed = 65, deleteSpeed = 35, holdTime = 1400, gapTime = 400;
 
