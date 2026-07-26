@@ -345,6 +345,16 @@ main { position: relative; }
   color: var(--fg);
 }
 
+/* Optional short intro paragraph shown under a section title (e.g. Experience) */
+.section__intro {
+  text-align: center;
+  color: var(--fg-muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+  max-width: 620px;
+  margin: calc(-1 * var(--space-lg)) auto var(--space-2xl);
+}
+
 .card {
   background: var(--surface);
   backdrop-filter: blur(24px) saturate(140%);
@@ -470,11 +480,15 @@ main { position: relative; }
 .timeline__meta { font-family: var(--font-mono); color: var(--fg-faint); font-size: 0.8rem; }
 .timeline__desc { margin-top: var(--space-sm); color: var(--fg-muted); font-size: 0.92rem; line-height: 1.7; max-width: 460px; }
 
-/* Seminars/Trainings & Organizations panels */
+/* Seminars/Trainings & Organizations panels — also reused for Experience/Education */
 .credentials__grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: var(--space-xl); margin-top: var(--space-3xl); max-width: 900px; margin-left: auto; margin-right: auto;
 }
+/* When this grid is the first block in a section (no timeline-container above it) */
+.credentials__grid--top { margin-top: 0; }
+.credentials__grid + .credentials__grid { margin-top: var(--space-3xl); }
+
 .credentials__col { padding: var(--space-2xl); }
 .credentials__title {
   font-family: var(--font-mono); font-size: 0.8rem; letter-spacing: 0.06em; text-transform: uppercase;
@@ -489,6 +503,27 @@ main { position: relative; }
 .credentials__sublist { list-style: none; margin-top: var(--space-md); display: flex; flex-direction: column; gap: var(--space-sm); }
 .credentials__sublist li { font-family: var(--font-body); color: var(--fg-muted); font-size: 0.85rem; padding-left: var(--space-lg); position: relative; }
 .credentials__sublist li::before { content: ''; position: absolute; left: 2px; top: 0.65em; width: 4px; height: 4px; border-radius: 50%; background: var(--accent); }
+
+/* Main "current role" block at the top of the Experience column */
+.experience__role {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  padding-bottom: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border);
+}
+.experience__role .credentials__row { flex-direction: row; align-items: baseline; justify-content: space-between; gap: var(--space-md); flex-wrap: wrap; }
+
+/* Small mono uppercase subheading used to break up an Experience column into subsections */
+.credentials__subhead {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: var(--space-2xl) 0 var(--space-lg);
+}
 
 /* ==========================================================================
    CONTACT
